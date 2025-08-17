@@ -5,7 +5,7 @@ git clone https://github.com/binary-signal/fluss-tiering-example.git fluss-tieri
 ```
 
 ```shell
-cd fluss-tiering-paimon 
+cd fluss-tiering-example 
 ```
 
 ```
