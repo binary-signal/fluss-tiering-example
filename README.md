@@ -1,7 +1,7 @@
 # How to run
 
 ```shell
-git clone bal blac blac minio-fluss-paimon
+git clone https://github.com/binary-signal/fluss-tiering-example.git fluss-tiering-example
 cd fluss-tiering-paimon 
 make some-magic-happen
 ```
