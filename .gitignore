@@ -24,3 +24,6 @@
 hs_err_pid*
 replay_pid*
 /.idea
+*.tgz
+/flink-1.20.2
+/fluss-0.7.0
