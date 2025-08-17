@@ -9,8 +9,8 @@ The first setup will take a few minutes. It involves downloading the required JA
 
 Then, start the Flink SQL client and run the SQL snippets from the blog post: Hands-on Fluss Lakehouse. https://fluss.apache.org/blog/hands-on-fluss-lakehouse/
 
-```
-./flink-1.20.2/bin/sql-client.sh
+```shell
+make sql-client
 ```
 
 

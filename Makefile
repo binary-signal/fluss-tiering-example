@@ -5,7 +5,7 @@ FLUSS_VERSION ?= 0.7.0
 FLUSS_HOME ?= ./fluss-$(FLUSS_VERSION)
 FLINK_HOME ?= ./flink-$(FLINK_VERSION)
 
-.PHONY: help setup clean-setup clean-bin-dist clean-logs clean-jars clean-all some-magic-happen show-jars download-jars show-setup
+.PHONY: help setup clean-setup clean-bin-dist clean-logs clean-jars clean-all some-magic-happen show-jars download-jars show-setup sql-client
 help:
 	@echo "Available targets:"
 	@echo "  setup               - Download and install Flink and Fluss with custom configuration"
@@ -27,6 +27,7 @@ help:
 	@echo "  show-setup          - Show Flink lib and Fluss lib and plugins directories"
 	@echo "  download-jars       - Download JAR files from Maven repositories"
 	@echo "  submit-tiering-job  - Submit tiering job to local flink cluster"
+	@echo "  sql-client          - Start Flink SQL Client"
 
 setup:
 	@echo "Running setup script..."
@@ -104,6 +105,7 @@ some-magic-happen: download-jars show-jars setup show-setup start-all
 	sleep 10
 	@echo "Submitting job to local flink cluster..."
 	@./tiering-job.sh
+
 
 
 
@@ -189,3 +191,8 @@ start-flink:
 stop-flink:
 	@echo "Stopping flink local cluster..."
 	@$(FLINK_HOME)/bin/stop-cluster.sh
+
+
+sql-client:
+	@echo "Starting flink sql client..."
+	@$(FLINK_HOME)/bin/sql-client.sh
