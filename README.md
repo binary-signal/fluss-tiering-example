@@ -2,17 +2,26 @@
 
 ```shell
 git clone https://github.com/binary-signal/fluss-tiering-example.git fluss-tiering-example
+```
+
+```shell
 cd fluss-tiering-paimon 
+```
+
+```
 make some-magic-happen
 ```
-The first setup will take a few minutes. It involves downloading the required JAR files, and binary distribution for Fluss and Flink,  applying configurations, placing downloaded jars  in the correct locations, starting MinIO,  and finally submitting the tiering job. Once everything is running, all services will be up and ready.
 
-Then, start the Flink SQL client and run the SQL snippets from the blog post: Hands-on Fluss Lakehouse. https://fluss.apache.org/blog/hands-on-fluss-lakehouse/
+The first setup will take a few minutes. It involves downloading the required JAR files, and binary distribution for
+Fluss and Flink, applying configurations, placing downloaded jars in the correct locations, starting MinIO, and finally
+submitting the tiering job. Once everything is running, all services will be up and ready.
+
+Then, start the Flink SQL client and run the SQL snippets from the blog post: Hands-on Fluss
+Lakehouse. https://fluss.apache.org/blog/hands-on-fluss-lakehouse/
 
 ```shell
 make sql-client
 ```
-
 
 **Makefile Commands**
 
